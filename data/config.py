@@ -1,8 +1,21 @@
-from environs import Env
+import os
 
-env = Env()
-env.read_env()
+from dotenv import load_dotenv
 
-BOT_TOKEN = env.str("BOT_TOKEN")
-ADMINS = env.list("ADMINS")
-IP = env.str("ip")
+load_dotenv()
+
+BOT_TOKEN = str(os.getenv("BOT_TOKEN"))
+admins = [
+    870958534
+]
+
+ip = os.getenv("ip")
+
+aiogram_redis = {
+    'host': ip,
+}
+
+redis = {
+    'address': (ip, 6379),
+    'encoding': 'utf8'
+}
