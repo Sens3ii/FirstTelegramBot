@@ -1,2 +1,2 @@
 # FirstTgBot
-First bot on aiogram
+Tasks from Udemy course aiogram
